@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -28,17 +29,35 @@
             <th scope="col">Options</th>
         </tr>
     </thead>
+
+    <?php
+        //1. koneksi basis data
+        require_once('db.php');
+        //2. query
+        $result = $pdo->query('SELECT * FROM user');
+    ?>
+
     <tbody>
+        <?php 
+            while ($row = $result->fetch())
+        {
+        ?>
+        
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <th scope="row"><?php echo $row ['id']; ?></th>
+            <td><?php echo $row ['first_name']; ?></td>
+            <td><?php echo $row ['last_name']; ?></td>
             <td>
                 <a class="btn btn-sm btn-danger" href="index.html">Delete</a>
                 <a class="btn btn-sm btn-warning" href="edit.html">Edit</a>
                 <a class="btn btn-sm btn-info" href="detail.html">Detail</a>
             </td>
         </tr>
+
+        <?php
+        }
+        ?>
+
     </tbody>
     </table>
 
@@ -49,6 +68,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
+
 </html> 
 
 
