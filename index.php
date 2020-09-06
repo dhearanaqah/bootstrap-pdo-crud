@@ -31,7 +31,7 @@
             <td>
                 <a class="btn btn-sm btn-danger" href="index.html">Delete</a>
                 <a class="btn btn-sm btn-warning" href="edit.html">Edit</a>
-                <a class="btn btn-sm btn-info" href="detail.html">Detail</a>
+                <a class="btn btn-sm btn-info" href="detail.php?id=<?php echo $row['id']; ?>">Detail</a>
             </td>
         </tr>
 
