@@ -30,7 +30,7 @@
             <td><?php echo $row ['last_name']; ?></td>
             <td>
                 <a class="btn btn-sm btn-danger" href="index.html">Delete</a>
-                <a class="btn btn-sm btn-warning" href="edit.html">Edit</a>
+                <a class="btn btn-sm btn-warning" href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
                 <a class="btn btn-sm btn-info" href="detail.php?id=<?php echo $row['id']; ?>">Detail</a>
             </td>
         </tr>
