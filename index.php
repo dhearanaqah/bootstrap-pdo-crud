@@ -1,6 +1,6 @@
 <?php require_once('inc/header.php'); ?>
     
-    <a class="btn btn-primary" href="add.html">Add</a>
+    <a class="btn btn-primary" href="add.php">Add</a>
     <table class="table mt-3">
     <thead>
         <tr>
