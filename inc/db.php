@@ -1,7 +1,7 @@
 <?php
 //koneksi ke database dengan dsn
 $host   = 'localhost';
-$db     = 'db-user';
+$db     = 'db_user';
 $user   = 'root';
 $pass   = '';
 $charset= 'utf8';
